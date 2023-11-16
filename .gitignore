@@ -1,0 +1,20 @@
+﻿################################################################################
+# Este arquivo .gitignore foi criado automaticamente pelo Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/Microsservice-Authenticator/config/applicationhost.config
+/.vs/Microsservice-Authenticator/FileContentIndex/2ff8feb3-f6f2-4076-a5e6-020d141b1cb0.vsidx
+/.vs/Microsservice-Authenticator/FileContentIndex
+/.vs/Microsservice-Authenticator/FileContentIndex/d936e093-db4a-45c7-90a2-471b91fbaeaf.vsidx
+/.vs/Microsservice-Authenticator/v17
+/Microsservice-Application/bin/Debug/net7.0
+/Microsservice-Application/obj/Debug/net7.0
+/Microsservice-Application/obj
+/Microsservice-Domain/bin/Debug/net7.0
+/Microsservice-Domain/obj/Debug/net7.0
+/Microsservice-Domain/obj
+/Microsservice-Infrastructure/bin/Debug/net7.0
+/Microsservice-Infrastructure/obj/Debug/net7.0
+/Microsservice-Infrastructure/obj
+/Microsservice-Service/bin/Debug/net7.0
+/Microsservice-Service/obj
