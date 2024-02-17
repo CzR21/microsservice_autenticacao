@@ -1,6 +1,7 @@
 ﻿using Microsservice_Application.Interfaces.Repositories;
 using Microsservice_Application.Interfaces.Services;
 using Microsservice_Domain.Entites;
+using Microsservice_Domain.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,6 +32,26 @@ namespace Microsservice_Application.Services
         public Usuario BuscarUsuarioPorEmail(string email, string senha)
         {
             return _usuarioRepository.BuscarUsuarioPorEmail(email, senha);
+        }
+
+        public List<UsuarioModel> BuscarUsuarios()
+        {
+            List<Usuario> usuarios = _usuarioRepository.BuscarUsuarios();
+
+            if (usuarios.Count() == 0)
+            {
+                return null;
+            }
+
+            var model = usuarios.Select(x => new UsuarioModel()
+            {
+                Id = x.Id,
+                Nome = x.Nome,
+                Email = x.Email,
+                Celular = x.Celular,
+            }).ToList();
+
+            return model;
         }
 
         public void AdicionarUsuario(Usuario usuario)

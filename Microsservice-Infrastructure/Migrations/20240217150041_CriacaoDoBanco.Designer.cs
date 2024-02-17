@@ -12,8 +12,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Microsservice_Infrastructure.Migrations
 {
     [DbContext(typeof(MicrosserviceContext))]
-    [Migration("20231116205330_first")]
-    partial class first
+    [Migration("20240217150041_CriacaoDoBanco")]
+    partial class CriacaoDoBanco
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

@@ -10,7 +10,7 @@ namespace Microsservice_Domain.Security
 {
     public class SHA2
     {
-        private readonly static string salt = "Autenticacao#2023";
+        private readonly static string salt = "Autenticacao#2024";
         public static string GenerateHash(string password)
         {
             string hashed = Convert.ToBase64String(KeyDerivation.Pbkdf2(

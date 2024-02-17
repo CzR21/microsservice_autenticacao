@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Microsservice_Infrastructure.Migrations
 {
     /// <inheritdoc />
-    public partial class first : Migration
+    public partial class CriacaoDoBanco : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

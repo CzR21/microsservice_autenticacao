@@ -12,6 +12,7 @@ namespace Microsservice_Application.Interfaces.Repositories
         Usuario BuscarUsuarioPorId(Guid idUsuario);
         Usuario BuscarUsuarioPorEmail(string email);
         Usuario BuscarUsuarioPorEmail(string email, string senha);
+        List<Usuario> BuscarUsuarios();
         void AdicionarUsuario(Usuario usuario);
         void AtualizarUsuario(Usuario usuario);
 

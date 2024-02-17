@@ -97,7 +97,7 @@ namespace Microsservice_Application.Services
                 return new ResponseBaseModel()
                 {
                     Mensagem = "Usuário criado com sucesso",
-                    Codigo = 204
+                    Codigo = 200
                 };
             }
             catch (Exception ex)
@@ -134,7 +134,7 @@ namespace Microsservice_Application.Services
                 return new ResponseBaseModel()
                 {
                     Mensagem = "Senha alterada com sucesso!",
-                    Codigo = 204
+                    Codigo = 200
                 };
             }
             catch (Exception ex)

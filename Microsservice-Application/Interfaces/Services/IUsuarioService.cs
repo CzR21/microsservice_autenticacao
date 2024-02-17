@@ -1,4 +1,5 @@
 ﻿using Microsservice_Domain.Entites;
+using Microsservice_Domain.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +13,7 @@ namespace Microsservice_Application.Interfaces.Services
         Usuario BuscarUsuarioPorId(Guid idUsuario);
         Usuario BuscarUsuarioPorEmail(string email);
         Usuario BuscarUsuarioPorEmail(string email, string senha);
+        List<UsuarioModel> BuscarUsuarios();
         void AdicionarUsuario(Usuario usuario);
         void AtualizarUsuario(Usuario usuario);
 

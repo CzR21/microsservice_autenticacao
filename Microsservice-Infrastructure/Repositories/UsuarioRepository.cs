@@ -34,6 +34,11 @@ namespace Microsservice_Infrastructure.Repositories
             return _context.Usuarios.FirstOrDefault(x => x.Email.ToLower().Equals(email.ToLower()) && x.Senha.Equals(senha) && x.TipoStatus == TipoStatus.Ativo);
         }
 
+        public List<Usuario> BuscarUsuarios()
+        {
+            return _context.Usuarios.Where(x => x.TipoStatus == TipoStatus.Ativo).ToList();
+        }
+
         public void AdicionarUsuario(Usuario usuario)
         {
             _context.Usuarios.Add(usuario);
