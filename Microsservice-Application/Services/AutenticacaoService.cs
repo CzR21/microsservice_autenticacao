@@ -22,7 +22,7 @@ namespace Microsservice_Application.Services
             _usuarioService = usuarioService;
         }
 
-        public ResponseBaseModel Login(LoginModel model, string dispositivo)
+        public ResponseBaseModel Login(LoginModel model)
         {
             try
             {

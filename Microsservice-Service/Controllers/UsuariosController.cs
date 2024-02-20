@@ -14,6 +14,11 @@ namespace Microsservice_Service.Controllers
     {
         private readonly IUsuarioService _usuarioService;
 
+        public UsuariosController(IUsuarioService usuarioService)
+        {
+            _usuarioService = usuarioService;
+        }
+
         [HttpGet]
         [Authorize]
         [Route("buscar-usuarios")]

@@ -44,7 +44,7 @@ namespace Microsservice_Service.Controllers
         {
             try
             {
-                var response = _autenticacaoService.Login(loginModel, "Dispositivo padrão");
+                var response = _autenticacaoService.Login(loginModel);
 
                 return this.HandleStatusCode(response);
                 
