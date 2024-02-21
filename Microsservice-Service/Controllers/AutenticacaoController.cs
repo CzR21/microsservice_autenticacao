@@ -60,7 +60,6 @@ namespace Microsservice_Service.Controllers
         }
         
         [HttpPost]
-        [Authorize]
         [Route("redefinir-senha")]
         public IActionResult ResetarSenha([FromBody] LoginModel model)
         {

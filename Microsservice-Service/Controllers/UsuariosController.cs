@@ -5,6 +5,7 @@ using Microsservice_Application.Interfaces.Services;
 using Microsservice_Application.Services;
 using Microsservice_Domain.Entites;
 using Microsservice_Domain.Models;
+using Seed_API_Application.Extentions;
 
 namespace Microsservice_Service.Controllers
 {
@@ -40,6 +41,25 @@ namespace Microsservice_Service.Controllers
             catch (Exception ex) 
             {
                 return BadRequest(new ResponseBaseModel() { Mensagem = "Erro ao buscar usuários. " + ex.Message, Codigo = 400 });
+            }
+        }
+
+        [HttpDelete]
+        [Authorize]
+        [Route("remover-usuario/{idUsuario}")]
+        public async Task<IActionResult> DeletarUsuario(Guid idUsuario)
+        {
+            try
+            {
+                var idUser = User.BuscarIdUser();
+
+                _usuarioService.RemoverUsuario(idUsuario, idUser);
+
+                return Ok(new ResponseBaseModel() { Mensagem = "Usuários removido com suscesso", Codigo = 200 });
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new ResponseBaseModel() { Mensagem = "Erro ao remover usuário. " + ex.Message, Codigo = 400 });
             }
         }
     }

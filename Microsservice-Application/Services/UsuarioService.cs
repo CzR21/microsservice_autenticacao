@@ -1,7 +1,9 @@
 ﻿using Microsservice_Application.Interfaces.Repositories;
 using Microsservice_Application.Interfaces.Services;
 using Microsservice_Domain.Entites;
+using Microsservice_Domain.Enums;
 using Microsservice_Domain.Models;
+using Microsservice_Domain.Utils;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -62,6 +64,22 @@ namespace Microsservice_Application.Services
         public void AtualizarUsuario(Usuario usuario)
         {
             _usuarioRepository.AtualizarUsuario(usuario);
+        }
+
+        public void RemoverUsuario(Guid idUsuario, Guid idUser)
+        {
+            var user = _usuarioRepository.BuscarUsuarioPorId(idUsuario);
+
+            if (user == null)
+            {
+                throw new Exception("Usuário não encontrado");
+            }
+
+            user.TipoStatus = TipoStatus.Removido;
+            user.DataModificacao = DataUtils.GetDateTimeBrasil();
+            user.ModificadoPor = idUser;
+
+            _usuarioRepository.AtualizarUsuario(user);
         }
     }
 }

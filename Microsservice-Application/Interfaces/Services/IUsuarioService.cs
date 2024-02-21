@@ -16,6 +16,7 @@ namespace Microsservice_Application.Interfaces.Services
         List<UsuarioModel> BuscarUsuarios();
         void AdicionarUsuario(Usuario usuario);
         void AtualizarUsuario(Usuario usuario);
+        void RemoverUsuario(Guid idUsuario, Guid idUser);
 
     }
 }
